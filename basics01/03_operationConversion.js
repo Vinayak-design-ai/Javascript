@@ -17,3 +17,6 @@ console.log(isBoolean);
 // 1=>true , 0=>False
 // ""=>false (empty block)
 //"vvvvv" => true 
+
+//console.log("1"+2+3);
+/// in this case the last 2 digits will be treated as strings as well 
