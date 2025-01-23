@@ -1,6 +1,6 @@
 //// ARRAYS
 
-const arr = [ 1,2, 3, 4, 5]
+
 const heroes = ["Ironman" , "Thor", "Captain America"]
 
 const arr2 = new Array("hello", "world" , 1 , 2)
@@ -8,7 +8,7 @@ const arr2 = new Array("hello", "world" , 1 , 2)
 
 /// METHODS IN ARRAY
 // arr.push(6 ) // adds a new number in the end
-// arr.push( "YOo bitch")
+// arr.push( "YOo ")
 // arr.pop()// removes the last number from the array
 // arr.unshift(9, "Hiii") // adds the number in the beginning
 // arr.shift() // removes the number from the beginning
@@ -24,7 +24,7 @@ const arr2 = new Array("hello", "world" , 1 , 2)
 // console.log(newArr);
 // console.log(newArr1);
 // console.log(newArr2);
-
+const arr = [ 1,2, 3, 4, 5]
 const myN1 = arr.slice(1,3)
 console.log("A",myN1);
 console.log(arr);
