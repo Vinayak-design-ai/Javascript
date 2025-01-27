@@ -26,6 +26,7 @@ function addTwoNums(number1 , number2) { // (number1 , number2) these are called
 function userLoggedIn(username = "Vinay"){  // with this it has a pre defined value and if we have no input then it will return the defined value and if any input is provided then the pre defined value will be over written
     if (!username){
         // if (username === undefined){
+        
         console.log("Please enter valid username");
         return
 
