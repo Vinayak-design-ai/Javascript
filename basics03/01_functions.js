@@ -32,4 +32,10 @@ function userLoggedIn(username = "Vinay"){  // with this it has a pre defined va
     }
     return `${username} Just Logged In`
 }
-console.log(userLoggedIn())
+// console.log(userLoggedIn())
+
+function calculateCartPrice(val1 , val2 ,...num1){
+    return num1
+
+}
+console.log(calculateCartPrice(100 , 200 , 300 , 1000 , 2000));
