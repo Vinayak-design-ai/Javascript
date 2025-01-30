@@ -32,15 +32,30 @@
 // console.log(`User Power : ${power}`);
 
 // +++++++++ IMPLICIT SCOPE (means asumed scope)
-let balance = 899
-// if (balance > 500) console.log("Enough Money");// dont use this very often
+// let balance = 899
+// // if (balance > 500) console.log("Enough Money");// dont use this very often
 
-if (balance<500){
-    console.log("Less than 500");
-}else if (balance<750){
-    console.log("Less than 750");
-}else if (balance < 900){
-    console.log("Less than 900");
-}else {
-    console.log("Less than 1200");
+// if (balance<500){
+//     console.log("Less than 500");
+// }else if (balance<750){
+//     console.log("Less than 750");
+// }else if (balance < 900){
+//     console.log("Less than 900");
+// }else {
+//     console.log("Less than 1200");
+// }
+const userLoggedIn = true ;
+const debitCard = false ;
+const hasAnAccount = false ;
+const emailLogin = false ;
+
+if (userLoggedIn && debitCard && hasAnAccount) {
+    console.log("Allowed to buy the course");
+    
+};
+
+
+if (hasAnAccount || emailLogin || debitCard) {
+    console.log("USer is Loggeed in");
+    
 }
