@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Chai Aur JavaScript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    
+const name = "vinayak is here"
+setInterval( (function(str){
+    console.log(name , Date.now , "Hello dear");
+    
+// }))
+
+document.getElementById('stop').addEventListener('click', function(){
+    console.log("The Function is Stopped");
+    clearInterval(intervalRun)
+})
+</script>
+</html>
