@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html</title>
+</head>
+
+    <body style="background-color: #414141; color: aliceblue;">
+        <h2>Amazing image</h2>
+        <div >
+            <ul id="images">
+                <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+                <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+                <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+                <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+                <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+                <li><a style="color: aliceblue;" href="https://google.com" id="google" target="_blank">Google</a></li>
+            </ul>
+       </div>
+    
+</body>
+<script>
+    // document.getElementById("owl").onclick = function (){
+    //     alert("Owl Clicked")    
+    // }
+    // attachEvent => earlier used
+    // Jquery => on used earlier.
+
+
+      // type , timestamp , defaultPrevented 
+    // taregt , toElement , srcElement , currentTarget 
+    // clientX , clientY , screenX , screenY // for interview ques
+    // // alt key , ctrl key , shift key , keyCode
+
+    // document.getElementById('images').addEventListener('click' , function (e){
+    //   console.log("Clicked the Ul");
+    // } , false )// with false bubbling method will be uswd 
+    // // document.getElementById('images').addEventListener('click' , function (e){
+    // //   console.log("Clicked the Ul");
+    // // } , false )// with false bubbling method will be uswd 
+
+    // document.getElementById('owl').addEventListener('click' , function (e){
+    //   console.log("Clicked the owl");
+    //   e.stopPropagation() // using this will not bubble up the top object 
+    // } , false )
+
+    // // Event Propogation 
+    // // 1> Bubbling Up (using false and it is default as well)=> Goes from inside out or bottom to top like a bubble 
+
+    // // 2> Capturing modoe (using true in the event listener) => Goes from top to bottom 
+
+
+    // document.getElementById('google').addEventListener('click' , function(e){
+    //     console.log("Google was Clicked");
+    //     e.preventDefault()
+    //     e.stopPropagation()
+    // }, false)
+
+    document.querySelector('#images').addEventListener('click' , function(e){
+        console.log(e.target.tagName);
+        
+        if (e.target.tagName === 'IMG') {
+            // console.log(e.target.id);
+            let removeIt = e.target.parentNode
+            removeIt.parentNode.removeChild(removeIt)
+        }
+        
+    }, false)
+
+
+        // removeIt.remove() // ++++++ NEWER METHODDDDDD .
+        
+  
+    </script>
+</html>
