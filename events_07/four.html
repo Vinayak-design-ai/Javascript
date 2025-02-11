@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Me</title>
+</head>
+<body>
+    <h1 id="demo"> Chai Aur JavaScript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+   
+   const element = document.getElementById("demo");
+//    setInterval(function() {console.log('hello')}, 1000);
+   const sayDate =document.querySelector('#start').addEventListener('click' , function(){
+    setInterval( sayDate )    
+    console.log("Vinayak" , Date.now())
+    })
+ 
+    const stopMe = document.querySelector('#stop').addEventListener('click' , function(){
+        clearInterval(sayDate);
+        console.log("Stopped");
+    })
+</script>
+</html>
