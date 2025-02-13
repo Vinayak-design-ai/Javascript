@@ -58,26 +58,26 @@
 // .finally ( () => {console.log("The Promise is either Resolved or Rejected");
 // })
 
-const promiseFive = new Promise (function (resolve , reject) {
-    setTimeout(() => {
-        let error = true ;
-        if (!error) {
-            resolve({username : "JavaScript" , password : "1234"})
-        } else {
-            reject("ERROR FOUND : JS went wrong")
-        }
-    } ,1000 )
-});
+// const promiseFive = new Promise (function (resolve , reject) {
+//     setTimeout(() => {
+//         let error = true ;
+//         if (!error) {
+//             resolve({username : "JavaScript" , password : "1234"})
+//         } else {
+//             reject("ERROR FOUND : JS went wrong")
+//         }
+//     } ,1000 )
+// });
 
-async function consumePromiseFive(){
-    try {
-        const response = await promiseFive
-        console.log(response);
-    } catch (error) {
-        console.log(error);
-    }
-}
-consumePromiseFive()
+// async function consumePromiseFive(){
+//     try {
+//         const response = await promiseFive
+//         console.log(response);
+//     } catch (error) {
+//         console.log(error);
+//     }
+// }
+// consumePromiseFive()
 
 
 // async function getAllUsers (){
@@ -93,12 +93,78 @@ consumePromiseFive()
 // }
 // getAllUsers()
 
-fetch('https://jsonplaceholder.typicode.com/users')
-.then((response) => {
-    return response.json()   
+// fetch('https://jsonplaceholder.typicode.com/users')
+// .then((response) => {
+//     return response.json()   
+// } )
+// .then((data) => {
+//     console.log(data);
+// } )
+// .catch((error) => console.log(error));
+
+// const url = 'https://jsonplaceholder.typicode.com/users'
+// fetch(url , [1,2,3,4])
+
+// .then((response) => {
+//     // console.log( obj);
+//     // console.log(response);
+//     return response.json()
+// })
+// .then ( (a) => {
+//    console.log(a);
+// })
+// .catch( (error) => console.log(error))
+
+// const promiseSix = new Promise((resolve ,reject)=>{
+//     setTimeout(()=>{
+//         resolve({username : "Vinnay" , password : "1234"})
+//         reject("Error Found")
+//     } , 1000 )
+//     console.log(typeof resolve);
+//     console.log(resolve.username);
+    
+//     return resolve
+// })
+// .then((response) => {
+//     console.log(response)
+// })
+// .catch((error)=> console.log(error))
+
+// const promiseThree = new Promise ((resolve , reject )=>{
+//     resolve({username : "Vinayak" , mail : "hii@123.com"})
+
+// } )
+// promiseThree.then((as)=> {
+//     console.log(as);
+// })
+
+// fetch('https://randomuser.me/api/')
+// .then((response) => response.json() )
+// .then (data => {
+//    let user =  data.results[0]
+//     console.log(`Area ${user.location.street.number} ${user.location.street.name} `);
+//     console.log(`Result ; ${user.dob.date} && ${user.dob.age}`);
+    
+// })
+// .catch(error => console.error("Error" , error))
+
+// fetch('https://randomuser.me/api/')
+// .then((response) => response.json() )
+// .then((data) => {
+//     // console.log(data);
+//     let user = data.results[0]
+//     // console.log(user);
+//     console.log(`First name :${user.name.first} & Last Name : ${user.name.last}`); 
+// } )
+// .catch((error) => console.log("Error" , error))
+
+fetch('https://jsonplaceholder.typicode.com/posts')
+.then((resolve) => resolve.json() )
+.then((data)=> {
+    for (let i = 0; i < 99; i++) {
+        const a = i 
+        let user = data[a]
+        console.log(`Title :${user.title} & Body : ${user.body}`);
+    }
 } )
-.then((data) => {
-    console.log(data);
-} )
-.catch((error) => console.log(error));
- 
+.catch((error) => console.log(error))
